@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <link href="full-screen-helper.css" rel="stylesheet"/>
+        <link href="Main.css" rel="stylesheet"/>
+        <script src="jquery-1.10.2.min.js"></script>
+        <script src="full-screen-helper.js"></script>
+    </head>
+    <body>
+        <div id="fullscreen" onclick="FullScreenHelper.request(document);">FULL SCREEN MODE</div>
+        <div id="exitfullscreen" onclick="FullScreenHelper.exit();">EXIT FULL SCREEN MODE</div>
+        
+        <div id="main"></div>
+    </body>
+    <script>
+        
+        $(document).on("fullscreenchange", function () {
+          if ($.fullScreenHelper("state")) {
+                $("#exitfullscreen").css("display","block");
+                $("#fullscreen").css("display","none");
+          } else {
+                $("#exitfullscreen").css("display","none");
+                $("#fullscreen").css("display","block");
+          }
+        });
+        
+    </script>
+</html>
+

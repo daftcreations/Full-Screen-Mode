@@ -1,0 +1,21 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+#fullscreen,#exitfullscreen{
+    font-family: sans-serif;
+    font-size: 14px;
+    position: absolute;
+    left: 20px;
+    top:90%;
+    color: white;
+}
+#exitfullscreen{
+    display: none;
+}
+#main{
+    height: 100vh;
+    width: 100%;
+    background-image: url(COLA%20KEY.jpg);
+    background-size: 100% 100%;
+}
